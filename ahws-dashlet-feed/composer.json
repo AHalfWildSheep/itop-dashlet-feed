@@ -1,0 +1,12 @@
+{
+  "name": "ahws/dashlet-feed",
+  "license": "GPLv3",
+  "config": {
+    "autoloader-suffix": "AHWSDF"
+  },
+  "autoload": {
+    "psr-4": {
+      "AHalfWildSheep\\iTop\\Extension\\DashletFeed\\": "src/"
+    }
+  }
+}

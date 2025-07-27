@@ -1,0 +1,188 @@
+$ahws-dashlet-feed-content--max-height: $ibo-size-700 !default;
+
+$ahws-dashlet-feed-content--no-activity--color: $ibo-color-grey-600 !default;
+$ahws-dashlet-feed-content--no-activity--padding-x: $ibo-spacing-800 !default;
+$ahws-dashlet-feed-content--no-activity--padding-y: $ibo-spacing-600 !default;
+
+$ahws-dashlet-feed-content--no-activity--icon--font-size: 48px !default;
+$ahws-dashlet-feed-content--no-activity--icon--margin-bottom: $ibo-spacing-500 !default;
+$ahws-dashlet-feed-content--no-activity--icon--opacity: 0.5 !default;
+
+$ahws-dashlet-feed--activity-item--padding-x: $ibo-spacing-300 !default;
+$ahws-dashlet-feed--activity-item--padding-y: $ibo-spacing-0 !default;
+
+$ahws-dashlet-feed--activity-icon--width: $ibo-size-350 !default;
+$ahws-dashlet-feed--activity-icon--height: $ahws-dashlet-feed--activity-icon--width !default;
+$ahws-dashlet-feed--activity-icon--border-radius: $ibo-border-radius-full !default;
+$ahws-dashlet-feed--activity-icon--margin-right: $ibo-spacing-500 !default;
+$ahws-dashlet-feed--activity-icon--font-size: 14px !default;
+$ahws-dashlet-feed--activity-icon--border: 3px solid $ibo-color-white-100 !default;
+
+$ahws-dashlet-feed--create-entry--icon--background-color: $common-color-orange-400 !default;
+$ahws-dashlet-feed--create-entry--icon--color: $ibo-color-white-100 !default;
+
+$ahws-dashlet-feed--edit-entry--icon--background-color: $common-color-orange-400 !default;
+$ahws-dashlet-feed--edit-entry--icon--color: $ibo-color-white-100 !default;
+
+$ahws-dashlet-feed--transition-entry--icon--background-color: $common-color-orange-400 !default;
+$ahws-dashlet-feed--transition-entry--icon--color: $ibo-color-white-100 !default;
+
+$ahws-dashlet-feed--caselog-entry--icon--background-color: $common-color-orange-400 !default;
+$ahws-dashlet-feed--caselog-entry--icon--color: $ibo-color-white-100 !default;
+
+$ahws-dashlet-feed--activity-content--min-width: $ibo-spacing-0 !default;
+$ahws-dashlet-feed--activity-content--padding-top: 2px !default;
+
+$ahws-dashlet-feed--activity-content--main-information: $ibo-spacing-700 !default;
+
+$ahws-dashlet-feed--activity-date--padding-right: $ibo-spacing-300 !default;
+$ahws-dashlet-feed--activity-date--color: $ibo-color-grey-700 !default;
+
+$ahws-dashlet-feed--activity-log-text--margin-top: $ibo-spacing-300 !default;
+$ahws-dashlet-feed--activity-log-text--padding-x: $ibo-spacing-300 !default;
+$ahws-dashlet-feed--activity-log-text--padding-y: $ibo-spacing-400 !default;
+$ahws-dashlet-feed--activity-log-text--color: $ibo-activity-entry--main-information--text-color !default;
+$ahws-dashlet-feed--activity-log-text--background-color: $ibo-activity-entry--main-information--is-current-user--background-color !default;
+$ahws-dashlet-feed--activity-log-text--border-radius: $ibo-border-radius-500 !default;
+$ahws-dashlet-feed--activity-log-text--border-left: 3px solid $ibo-color-blue-500 !default;
+$ahws-dashlet-feed--activity-log-text--max-height: $ibo-size-550 !default;
+
+$ahws-dashlet-feed--activity-item--link--line--background-color: $ibo-color-grey-200 !default;
+$ahws-dashlet-feed--activity-item--link--line--width: 3px !default;
+$ahws-dashlet-feed--activity-item--link--line--left: 14px !default;
+
+.ahws-dashlet-feed--title{
+  @extend %ibo-font-ral-bol-350;
+}
+.ahws-dashlet-feed-content{
+  display: flex;
+  flex-direction: column;
+  max-height: $ahws-dashlet-feed-content--max-height;
+  overflow: auto;
+}
+
+.ahws-dashlet-feed-content--no-activity {
+  text-align: center;
+  color: $ahws-dashlet-feed-content--no-activity--color;
+  padding: $ahws-dashlet-feed-content--no-activity--padding-x $ahws-dashlet-feed-content--no-activity--padding-y;
+}
+
+.ahws-dashlet-feed-content--no-activity i {
+  font-size: $ahws-dashlet-feed-content--no-activity--icon--font-size;
+  margin-bottom: $ahws-dashlet-feed-content--no-activity--icon--margin-bottom;
+  opacity: $ahws-dashlet-feed-content--no-activity--icon--opacity;
+}
+
+.ahws-dashlet-feed--activity-item {
+  display: flex;
+  position: relative;
+  padding:$ahws-dashlet-feed--activity-item--padding-x $ahws-dashlet-feed--activity-item--padding-y;
+}
+
+.ahws-dashlet-feed--activity-item:last-child {
+  margin-bottom: 0;
+}
+
+.ahws-dashlet-feed--activity-icon {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: $ahws-dashlet-feed--activity-icon--width;
+  height: $ahws-dashlet-feed--activity-icon--height;
+  border-radius: $ahws-dashlet-feed--activity-icon--border-radius;
+  margin-right: $ahws-dashlet-feed--activity-icon--margin-right;
+  font-size: $ahws-dashlet-feed--activity-icon--font-size;
+  border: $ahws-dashlet-feed--activity-icon--border;
+}
+
+.ahws-dashlet-feed--create-entry .ahws-dashlet-feed--activity-icon {
+  background: $ahws-dashlet-feed--create-entry--icon--background-color;
+  color: $ahws-dashlet-feed--create-entry--icon--color;
+}
+
+.ahws-dashlet-feed--edit-entry .ahws-dashlet-feed--activity-icon {
+  background: $ahws-dashlet-feed--edit-entry--icon--background-color;
+  color: $ahws-dashlet-feed--edit-entry--icon--color;
+}
+
+.ahws-dashlet-feed--transition-entry .ahws-dashlet-feed--activity-icon {
+  background: $ahws-dashlet-feed--transition-entry--icon--background-color;
+  color: $ahws-dashlet-feed--transition-entry--icon--color;
+}
+
+.ahws-dashlet-feed--case-log-entry .ahws-dashlet-feed--activity-icon {
+  background: $ahws-dashlet-feed--caselog-entry--icon--background-color;
+  color: $ahws-dashlet-feed--caselog-entry--icon--color;
+}
+
+.ahws-dashlet-feed--activity-content {
+  display: flex;
+  flex: 1;
+  min-width: $ahws-dashlet-feed--activity-content--min-width;
+  padding-top: $ahws-dashlet-feed--activity-content--padding-top;
+  justify-content: center;
+  align-items: center;
+}
+
+.ahws-dashlet-feed--activity-content--main-information {
+  flex-grow: 1;
+  padding-right: $ahws-dashlet-feed--activity-content--main-information;
+}
+
+.ahws-dashlet-feed--activity-date {
+  padding-right: 8px;
+  color: $ahws-dashlet-feed--activity-date--color;
+  @extend %ibo-font-ral-med-100;
+  text-align: right;
+  text-wrap: nowrap;
+}
+
+.ahws-dashlet-feed--activity-log-text {
+  margin-top: $ahws-dashlet-feed--activity-log-text--margin-top;
+  padding: $ahws-dashlet-feed--activity-log-text--padding-x $ahws-dashlet-feed--activity-log-text--padding-y;
+  color: $ahws-dashlet-feed--activity-log-text--color;
+  background-color: $ahws-dashlet-feed--activity-log-text--background-color;
+  border-radius: $ahws-dashlet-feed--activity-log-text--border-radius;
+  border-left: $ahws-dashlet-feed--activity-log-text--border-left;
+  @extend %ibo-font-ral-med-150;
+  line-height: 1.4;
+  max-height: $ahws-dashlet-feed--activity-log-text--max-height;
+  overflow: auto;
+}
+
+.ahws-dashlet-feed--activity-item:not(:first-child)::after {
+  content: ' ';
+  position: absolute;
+  background-color: $ahws-dashlet-feed--activity-item--link--line--background-color;
+  width: $ahws-dashlet-feed--activity-item--link--line--width;
+  height:8px;
+  left: $ahws-dashlet-feed--activity-item--link--line--left;
+  top: 0;
+}
+
+.ahws-dashlet-feed--activity-item:not(:last-child)::before {
+  content: ' ';
+  position: absolute;
+  background-color: $ahws-dashlet-feed--activity-item--link--line--background-color;
+  width: $ahws-dashlet-feed--activity-item--link--line--width;
+  height: calc(100% - 8px);
+  left: $ahws-dashlet-feed--activity-item--link--line--left;
+  bottom: 0;
+}
+
+@include touch {
+  .ahws-dashlet-feed--activity-item {
+    flex-direction: row;
+  }
+  .ahws-dashlet-feed--activity-content {
+    flex-direction: column;
+  }
+  .ahws-dashlet-feed--activity-date{
+    text-align: left;
+  }
+  .ahws-dashlet-feed--activity-content {
+    align-items: start;
+  }
+}

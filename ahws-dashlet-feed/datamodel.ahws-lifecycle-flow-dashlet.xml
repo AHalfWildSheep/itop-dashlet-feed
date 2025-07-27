@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1">
+  <branding>
+    <themes_common>
+      <stylesheets>
+        <stylesheet id="dashlet-feed-style" _delta="define">ahws-dashlet-feed/css/dashlet-feed-style.scss</stylesheet>
+      </stylesheets>
+    </themes_common>
+  </branding>
+</itop_design>

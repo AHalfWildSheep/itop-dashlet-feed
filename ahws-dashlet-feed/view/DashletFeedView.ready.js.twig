@@ -1,0 +1,6 @@
+(() => {
+    const oContent = document.querySelector('#{{ oUIBlock.GetId() }} .ahws-dashlet-feed-content');
+    if (oContent && oContent.scrollHeight) {
+        oContent.scrollTop = oContent.scrollHeight;
+    }
+})();

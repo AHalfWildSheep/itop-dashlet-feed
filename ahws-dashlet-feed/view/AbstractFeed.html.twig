@@ -1,0 +1,21 @@
+<div id="{{ oUIBlock.GetId() }}" class="ahws-dashlet-feed--activity-item {{ oUIBlock.GetBlockCode() }}">
+        {% block icon %}
+        <div class="ahws-dashlet-feed--activity-icon">
+            <i class="{{ oUIBlock.GetDecorationClasses }}"></i>
+        </div>
+        {% endblock %}
+    <div class="ahws-dashlet-feed--activity-content">
+        <div class="ahws-dashlet-feed--activity-content--main-information">
+        {% block content %}
+        {% endblock %}
+        {% block postcontent %}
+        {% endblock %}
+        </div>
+        <div class="ahws-dashlet-feed--activity-date"
+             data-tooltip-content="{{ oUIBlock.GetFormattedDateTime() }}"
+             data-tooltip-placement="bottom"
+             data-formatted-datetime="{{ oUIBlock.GetFormattedDateTime() }}">
+            {{ oUIBlock.GetFormattedDateTime() }}
+        </div>
+    </div>
+</div>

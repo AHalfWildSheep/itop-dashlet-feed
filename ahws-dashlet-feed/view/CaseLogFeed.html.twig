@@ -1,0 +1,7 @@
+{% extends 'ahws-dashlet-feed/view/AbstractFeed.html.twig' %}
+{% block content %}
+    {{ 'UI:DashletFeed:CaseLog:Content:Text'|dict_format(oUIBlock.GetTargetObjectHTML(), oUIBlock.GetLogAttribute(), oUIBlock.GetContactHTML())|raw }}
+    <div class="ahws-dashlet-feed--activity-log-text ibo-is-html-content">{{ oUIBlock.GetLastLog() |raw}}</div>
+{% endblock %}
+{% block postcontent %}
+{% endblock %}

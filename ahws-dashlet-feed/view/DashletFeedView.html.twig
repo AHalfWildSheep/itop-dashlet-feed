@@ -1,0 +1,31 @@
+{# activity-feed-dashlet.html.twig #}
+{% set sBlockId = oUIBlock.GetId() %}
+{% set aData = oUIBlock.GetActivities() %}
+<div id="{{ sBlockId }}" class="{{ oUIBlock.GetBlockCode() }}" data-role="ibo-dashlet">
+    <div class="ibo-panel ibo-is-opened">
+        <div class="ibo-panel--header">
+            <div class="ibo-panel--title">{{ oUIBlock.GetTitle() }}</div>
+        </div>
+        <div class="ibo-panel--body ">
+            <div class="ahws-dashlet-feed-content">
+            {% if aData is empty %}
+                <div class="ahws-dashlet-feed-content--no-activity">
+                    <i class="fas fa-inbox"></i>
+                    <p>
+                    {% if oUIBlock.GetClass() == 'UnkownClass' %}
+                        {{ 'UI:DashletFeed:NoOQL'|dict_s }}
+                    {% else %}
+                        {{ 'UI:DashletFeed:NoActivity'|dict_s }}
+                    {% endif %}
+                    </p>
+                </div>
+                {% else %}
+                    {% for activity in aData %}
+                        {{ render_block(activity) }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+

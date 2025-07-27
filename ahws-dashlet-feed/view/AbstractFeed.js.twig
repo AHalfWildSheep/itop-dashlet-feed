@@ -1,0 +1,11 @@
+
+(() => {
+    const oDateDiv = $('#{{ oUIBlock.GetId() }} .ahws-dashlet-feed--activity-date');
+    const oEntryDateTime = moment(oDateDiv.attr('data-formatted-datetime'), '{{ oUIBlock.GetDateTimeFormatForJSWidget() }}');
+    const oNowDateTime = moment()
+
+    const fDays = moment.duration(oNowDateTime.diff(oEntryDateTime)).asDays();
+    if (fDays <  {{ oUIBlock.GetDatetimesReformatLimit() }}) {
+        oDateDiv.text(moment(oDateDiv.attr('data-formatted-datetime'), '{{ oUIBlock.GetDateTimeFormatForJSWidget() }}').fromNow());
+    }
+})();

@@ -1,0 +1,4 @@
+{% extends 'ahws-dashlet-feed/view/AbstractFeed.html.twig' %}
+{% block content %}
+    {{ 'UI:DashletFeed:TransitionFeed:Content:Text'|dict_format(oUIBlock.GetTargetObjectHTML(), oUIBlock.GetPreviousStateHTML(), oUIBlock.GetCurrentStateHTML(), oUIBlock.GetContactHTML())|raw }}
+{% endblock %}
